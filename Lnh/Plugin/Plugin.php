@@ -615,7 +615,7 @@ class Plugin
 
     }
 
-    public function importPageAction()
+    public function importPageAction($cron = false)
     {
         $equipe = \get_option('lnh_equipe_handball');
         $equipe = strtolower($equipe['text_string']);
@@ -636,12 +636,14 @@ class Plugin
                 $importer->save();
             }
         }
-
-        /**
-         * Redirection après import (pour éviter de relancer l'import)
-         */
-        wp_redirect($_SERVER['HTTP_REFERER']);
-        exit();
+        
+        if(!$cron){
+            /**
+             * Redirection après import (pour éviter de relancer l'import)
+             */
+            wp_redirect($_SERVER['HTTP_REFERER']);
+            exit();
+        }
     }
     
     /**
