@@ -2,6 +2,10 @@
 Can import data from LNH (http://www.lnh.fr) webservices about players, calendar and ranking.
 Plugin only in french for the moment.
 
+## Dependency
+You can import datas without any others plugin, but the plugin is working with a framework plugin to add custom fields :
+https://github.com/Weysan/wp-framework-backend-form
+
 ## Install
 - Download the wordpress plugin.
 - Unzip the file in your plugin directory
