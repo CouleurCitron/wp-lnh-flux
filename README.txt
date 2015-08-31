@@ -1,5 +1,5 @@
 === LNH Flux ===
-Contributors: Weysan
+Contributors: Weysan, CouleurCitron
 Tags: LNH, handball, import
 Requires at least: 4.2
 Tested up to: 4.3
@@ -11,16 +11,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Can import data from LNH (http://www.lnh.fr) webservices about players, calendar and ranking.
 Plugin only in french for the moment.
 
-== Dependency ==
+= Dependency =
 You can import datas without any others plugin, but the plugin is working with a framework plugin to add custom fields :
 https://github.com/Weysan/wp-framework-backend-form
 
-== Install ==
+= Install =
 - Download the wordpress plugin.
 - Unzip the file in your plugin directory
 - Activate the plugin in your backoffice
 
-== How to use ==
+= How to use =
 
 = Settings =
 After activate your plugin, you have to configure it :
