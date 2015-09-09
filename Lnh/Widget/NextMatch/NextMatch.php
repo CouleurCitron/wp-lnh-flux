@@ -32,6 +32,7 @@ class NextMatch extends \WP_Widget
         
         $date = new \DateTime();
         $date_format = $date->format('Y-m-d');
+        $heure_format = $date->format('H:i');
         
         $post = get_posts(
                             array(
@@ -43,6 +44,11 @@ class NextMatch extends \WP_Widget
                                         array(
                                            'key'     => 'dateUK',
                                            'value'   => (string)$date_format,
+                                           'compare' => '>='
+                                        ),
+                                        array(
+                                           'key'     => 'heure',
+                                           'value'   => (string)$heure_format,
                                            'compare' => '>'
                                         )
                                      )
