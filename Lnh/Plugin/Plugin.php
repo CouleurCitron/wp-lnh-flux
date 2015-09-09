@@ -618,14 +618,14 @@ class Plugin
     public function importPageAction($cron = false)
     {
         $equipe = \get_option('lnh_equipe_handball');
-        $equipe = strtolower($equipe['text_string']);
+        $equipe_flux = strtolower($equipe['text_string']);
         
         /**
          * Import des données
          */
-        if($equipe['calendrier'] == '1') $flux['calendrier'] = 'http://www.lnh.fr/remote/equipes/'.$equipe.'/xml_saisonCalendrierEquipe.xml';
-        if($equipe['classement'] == '1') $flux['classement'] = 'http://www.lnh.fr/remote/equipes/'.$equipe.'/xml_saisonClassement.xml';
-        if($equipe['joueurs'] == '1') $flux['joueurs'] = 'http://www.lnh.fr/remote/equipes/'.$equipe.'/xml_saisonCompositionEquipe.xml';
+        if($equipe['calendrier'] == '1') $flux['calendrier'] = 'http://www.lnh.fr/remote/equipes/'.$equipe_flux.'/xml_saisonCalendrierEquipe.xml';
+        if($equipe['classement'] == '1') $flux['classement'] = 'http://www.lnh.fr/remote/equipes/'.$equipe_flux.'/xml_saisonClassement.xml';
+        if($equipe['joueurs'] == '1') $flux['joueurs'] = 'http://www.lnh.fr/remote/equipes/'.$equipe_flux.'/xml_saisonCompositionEquipe.xml';
 
         foreach ($flux as $type => $xml) {
             $objects = new Parser($xml);
