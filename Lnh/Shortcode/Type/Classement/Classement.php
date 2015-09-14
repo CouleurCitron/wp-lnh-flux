@@ -84,7 +84,7 @@ class Classement extends Sanitize implements ShortcodeInterface
                             <div>'. get_post_meta($team->ID, 'totalPoint', true) .'</div>
                             <div class="hidden_mobile">
                                     <div>0</div>
-                                    <div>26</div>
+                                    <div>'. get_post_meta($team->ID, 'totalMatch', true) .'</div>
                                     <div>'. get_post_meta($team->ID, 'totalVictoire', true) .'</div>
                                     <div>'. get_post_meta($team->ID, 'totalNul', true) .'</div>
                                     <div>'. get_post_meta($team->ID, 'totalDefaite', true) .'</div>
